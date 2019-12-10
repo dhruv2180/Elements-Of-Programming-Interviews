@@ -1,0 +1,32 @@
+'''
+
+Question : Reverse bits of 64-bits unsigned integer
+
+1. Get the lengths of bits in the given number
+2. Set if length-ith bit in output to be same as input number
+
+
+'''
+
+def reverse_bits_brute(num):
+
+    output = 0
+    index = 1
+    len = 0
+    temp = num
+
+    while temp != 0:
+        len+=1
+        temp = temp>>1
+
+    while num !=0:
+        if (num&1) == 1:
+            output = output | (index << len-1)
+        len-=1
+        num = num >> 1
+
+    return output
+
+
+print (bin(251))
+print (bin(reverse_bits_brute(251)))
