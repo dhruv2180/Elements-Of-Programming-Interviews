@@ -1,0 +1,33 @@
+"""
+Delete duplicates from a sorted array:
+
+keep track of lastIndex : index of unique value, currIndex : currentIndex
+
+"""
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        
+        
+        lastIndex = -1
+        currIndex = 0
+        prev = None
+        
+        if len(nums)<= 1:
+            return len(nums)
+        
+        while currIndex < len(nums):
+            
+            if nums[currIndex] != prev:
+                
+                nums[lastIndex+1] = nums[currIndex]
+                prev = nums[currIndex]
+                lastIndex+=1
+                    
+            
+            currIndex+=1 
+        return lastIndex+1
