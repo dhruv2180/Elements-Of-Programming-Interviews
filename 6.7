@@ -1,0 +1,54 @@
+"""
+
+
+Recursive code: 
+          
+          return say(get(n-1))
+          
+"""
+
+
+class Solution(object):
+    def countAndSay(self, n):
+        """
+        :type n: int
+        :rtype: str
+        """
+        
+        def say(num):
+            
+
+            prev = None
+            count = 0
+            out = []
+            
+            for x in num:
+                
+                if not prev:
+                    prev = x
+                    count+=1
+                    continue
+                if x!=prev:
+                    
+                    
+                    out.append(str(count))
+                    out.append(prev)
+                    prev = x
+                    count = 1
+                else:
+                    count+=1
+            
+            out.append(str(count))
+            out.append(prev)
+            return out
+                        
+        def get(num):
+            
+            if str(num) == "1":
+                return "1"
+            
+            else:
+                
+                return say(get(num-1))
+        
+        return "".join(get(n))
