@@ -11,3 +11,4 @@ Prob No.        Date .              Name
 4.11            09/12               Rectanlge Overlap
 5.5             10/12               Remove Duplicates from sorted array
 5.9             10/12               Count of prime number less than n
+6.7             11/12               Look-and-say
