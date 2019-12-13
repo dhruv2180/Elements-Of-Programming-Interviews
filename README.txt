@@ -12,3 +12,6 @@ Prob No.        Date .              Name
 5.5             10/12               Remove Duplicates from sorted array
 5.9             10/12               Count of prime number less than n
 6.7             11/12               Look-and-say
+7.10            ..                  ...
+8.3             12/12               Valid parenthesis
+8.8             12/12               Implement Queue using stack
