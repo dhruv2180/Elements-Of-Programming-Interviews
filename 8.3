@@ -1,0 +1,30 @@
+class Solution(object):
+    def isValid(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        a = []
+        
+        
+        for x in s:
+            
+            if x == '(' or x == '{' or x == '[':
+                a.append(x)
+            else:
+                
+                if len(a) == 0:
+                    return False
+                else:
+                    
+                    if x == ')' and a[-1] == '(':
+                        a.pop()
+                    elif x == '}' and a[-1] == '{':
+                        a.pop()
+                    elif x == ']' and a[-1] == '[':
+                        a.pop()
+                    else:
+                        
+                        return False
+       
+        return len(a) == 0
