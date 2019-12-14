@@ -16,4 +16,7 @@ Prob No.        Date .              Name
 8.3             12/12               Valid parenthesis
 8.8             12/12               Implement Queue using stack
 9.10            ..                  Iterative inorder traversal
-10.5            ..                  Compute median of online data
+10.5            ..                  ...
+11.5            ..
+11.10           .. 
+12.4            13/12               compute LCA
