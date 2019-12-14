@@ -1,0 +1,49 @@
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def lowestCommonAncestor(self, root, t, q):
+        """
+        :type root: TreeNode
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: TreeNode
+        """
+        
+        p = {}
+        
+        def getParentMap(node):
+            
+
+            if node.left:
+                p[node.left] = node
+                getParentMap(node.left)
+            if node.right:
+                p[node.right] = node
+                getParentMap(node.right)
+        
+        getParentMap(root)
+        
+        visited = set()
+        curr = t
+        
+        while curr in p:
+            visited.add(curr)
+            curr = p[curr]
+        visited.add(curr)
+        
+        curr = q
+        
+        while curr in p:
+           
+            if curr in visited:
+                return curr
+            curr = p[curr]
+        if curr in visited:
+            return curr
+                
+                
